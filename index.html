@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Reception — Saad & Saniya</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="You're Invited — Saad & Saniya's Wedding Reception" />
+  <meta property="og:description" content="Join us for the reception of Saad & Saniya. Friday, May 01, 2026 at 8:00 PM — Royal Golden Resort & Marriage Lawn, Chhindwara." />
+  <meta property="og:image"       content="preview.jpg" />
+  <meta property="og:image:alt"   content="Wedding invitation card for Saad & Saniya" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Twitter / WhatsApp fallback -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="You're Invited — Saad & Saniya's Wedding Reception" />
+  <meta name="twitter:description" content="Join us for the reception of Saad & Saniya. Friday, May 01, 2026 at 8:00 PM — Royal Golden Resort & Marriage Lawn, Chhindwara." />
+  <meta name="twitter:image"       content="preview.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #f7f5f3;
+      --cream2:   #f0ece7;
+      --lavender: #8e6b8f;
+      --lav-light:#b89bb9;
+      --lav-pale: #e8dde9;
+      --grey:     #6b6b6b;
+      --grey-lt:  #9a9a9a;
+      --gold:     #c9a96e;
+      --gold-lt:  #e8d5b0;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--cream2);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--grey);
+    }
+
+    /* ── Page wrapper ─────────────────────────────── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%, #e8dde955 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 90%, #e8dde966 0%, transparent 60%),
+        var(--cream2);
+    }
+
+    /* ── Card ─────────────────────────────────────── */
+    .card {
+      position: relative;
+      background: var(--cream);
+      border-radius: 4px;
+      width: 100%;
+      max-width: 560px;
+      padding: 60px 48px 56px;
+      box-shadow:
+        0 2px 8px rgba(142,107,143,0.06),
+        0 12px 48px rgba(142,107,143,0.10),
+        0 32px 80px rgba(0,0,0,0.06);
+      overflow: hidden;
+      animation: cardIn 1.2s cubic-bezier(.22,.6,.36,1) both;
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Outer border lines ───────────────────────── */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid var(--lav-pale);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    /* ── Corner florals (SVG inline) ──────────────── */
+    .floral {
+      position: absolute;
+      width: 160px;
+      opacity: .55;
+      pointer-events: none;
+    }
+    .floral-tl { top: -4px; left: -4px; transform-origin: top left; }
+    .floral-br { bottom: -4px; right: -4px; transform: rotate(180deg); transform-origin: bottom right; }
+
+    /* ── Sections ─────────────────────────────────── */
+    .section { text-align: center; }
+
+    /* ── Bismillah (Arabic) ───────────────────────── */
+    .bismillah-ar {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--lavender);
+      line-height: 1.4;
+      letter-spacing: .02em;
+      animation: fadeUp 1s .3s both;
+    }
+    .bismillah-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(.55rem, 1.7vw, .7rem);
+      letter-spacing: .18em;
+      color: var(--grey);
+      margin-top: 6px;
+      animation: fadeUp 1s .45s both;
+    }
+
+    /* ── Divider ──────────────────────────────────── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 24px auto;
+      width: 72%;
+      animation: fadeUp 1s .55s both;
+    }
+    .divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--lav-pale), transparent); }
+    .divider-dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--lav-light); flex-shrink: 0; }
+
+    /* ── Body copy ────────────────────────────────── */
+    .body-text {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(.62rem, 1.9vw, .75rem);
+      font-weight: 500;
+      letter-spacing: .14em;
+      line-height: 2;
+      color: var(--grey);
+      animation: fadeUp 1s .6s both;
+    }
+
+    /* ── Names ────────────────────────────────────── */
+    .names-wrap {
+      margin: 28px 0 24px;
+      animation: fadeUp 1s .72s both;
+    }
+    .name {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3rem, 10vw, 4.6rem);
+      color: var(--lavender);
+      line-height: 1.05;
+      letter-spacing: .02em;
+      display: block;
+      transition: text-shadow .3s;
+    }
+    .name:hover {
+      text-shadow: 0 0 32px rgba(142,107,143,.32), 0 2px 16px rgba(142,107,143,.2);
+    }
+    .ampersand {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+      color: var(--lav-light);
+      display: block;
+      margin: 4px 0;
+      letter-spacing: .05em;
+    }
+
+    .with-family {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(.88rem, 2.5vw, 1.05rem);
+      font-weight: 600;
+      color: var(--grey);
+      letter-spacing: .12em;
+      margin-top: 10px;
+    }
+
+    /* ── Detail cards ─────────────────────────────── */
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeUp 1s .88s both;
+    }
+    .detail-item + .detail-item { animation-delay: 1s; }
+
+    .icon-wrap {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--lav-pale);
+      display: flex; align-items: center; justify-content: center;
+      background: white;
+    }
+    .icon-wrap svg { width: 16px; height: 16px; stroke: var(--lavender); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+    .detail-label {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(.6rem, 1.7vw, .7rem);
+      font-weight: 600;
+      letter-spacing: .18em;
+      color: var(--lavender);
+      text-transform: uppercase;
+    }
+    .detail-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      font-weight: 700;
+      color: #5a3d5c;
+      line-height: 1.5;
+    }
+    .detail-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(.9rem, 2.6vw, 1.05rem);
+      font-weight: 600;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    /* ── Bottom ornament ──────────────────────────── */
+    .bottom-ornament {
+      margin-top: 36px;
+      animation: fadeUp 1s 1.1s both;
+    }
+    .bottom-ornament svg { width: 80px; opacity: .35; }
+
+    /* ── Keyframes ────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Map button ───────────────────────────────── */
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border: 1px solid var(--lav-pale);
+      border-radius: 20px;
+      background: white;
+      color: var(--lavender);
+      font-family: 'Cinzel', serif;
+      font-size: .58rem;
+      letter-spacing: .14em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background .25s, border-color .25s, box-shadow .25s;
+    }
+    .map-btn:hover {
+      background: var(--lav-pale);
+      border-color: var(--lav-light);
+      box-shadow: 0 4px 16px rgba(142,107,143,.12);
+    }
+    .map-btn svg { width: 12px; height: 12px; stroke: var(--lavender); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* ── Print ────────────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .page { padding: 0; min-height: unset; }
+      .card { box-shadow: none; border: 1px solid var(--lav-pale); max-width: 100%; }
+      * { animation: none !important; }
+    }
+
+    @media (max-width: 420px) {
+      .card { padding: 48px 28px 44px; }
+      .floral { width: 120px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="card">
+
+    <!-- ── Floral corners ─────────────────────────── -->
+    <svg class="floral floral-tl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none">
+        <!-- stems -->
+        <path d="M10 190 Q40 120 90 90" stroke="#c9a6ca" stroke-width="1.2" opacity=".5"/>
+        <path d="M10 190 Q60 150 120 80" stroke="#c9a6ca" stroke-width="1" opacity=".4"/>
+        <path d="M10 190 Q30 100 70 50" stroke="#c9a6ca" stroke-width="1" opacity=".4"/>
+        <!-- leaves -->
+        <ellipse cx="55" cy="130" rx="14" ry="7" fill="#d4b8d5" opacity=".35" transform="rotate(-40 55 130)"/>
+        <ellipse cx="80" cy="105" rx="12" ry="6" fill="#d4b8d5" opacity=".3" transform="rotate(-60 80 105)"/>
+        <ellipse cx="38" cy="145" rx="10" ry="5" fill="#c9a6ca" opacity=".25" transform="rotate(-20 38 145)"/>
+        <!-- flowers -->
+        <!-- flower 1 @ top-right area -->
+        <g transform="translate(95,72)">
+          <circle cx="0" cy="0" r="5" fill="#e8d0e9" opacity=".7"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(300)"/>
+          <circle cx="0" cy="0" r="3.5" fill="#f0e0f1" opacity=".9"/>
+        </g>
+        <!-- flower 2 -->
+        <g transform="translate(60,48)">
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#e2c8e3" opacity=".55"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#e2c8e3" opacity=".55" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(288)"/>
+          <circle cx="0" cy="0" r="3" fill="#f5edf6" opacity=".9"/>
+        </g>
+        <!-- flower 3 small -->
+        <g transform="translate(118,45)">
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#e8d0e9" opacity=".5"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#e8d0e9" opacity=".5" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(300)"/>
+          <circle cx="0" cy="0" r="2.5" fill="#f5edf6" opacity=".9"/>
+        </g>
+        <!-- buds -->
+        <ellipse cx="75" cy="30" rx="4" ry="7" fill="#d4b8d5" opacity=".4" transform="rotate(-20 75 30)"/>
+        <ellipse cx="35" cy="110" rx="3" ry="5" fill="#c9a6ca" opacity=".35" transform="rotate(30 35 110)"/>
+        <!-- dots -->
+        <circle cx="105" cy="95" r="1.8" fill="#c9a6ca" opacity=".4"/>
+        <circle cx="50" cy="60" r="1.4" fill="#d4b8d5" opacity=".35"/>
+        <circle cx="85" cy="55" r="1.2" fill="#c9a6ca" opacity=".3"/>
+      </g>
+    </svg>
+
+    <svg class="floral floral-br" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none">
+        <path d="M10 190 Q40 120 90 90" stroke="#c9a6ca" stroke-width="1.2" opacity=".5"/>
+        <path d="M10 190 Q60 150 120 80" stroke="#c9a6ca" stroke-width="1" opacity=".4"/>
+        <path d="M10 190 Q30 100 70 50" stroke="#c9a6ca" stroke-width="1" opacity=".4"/>
+        <ellipse cx="55" cy="130" rx="14" ry="7" fill="#d4b8d5" opacity=".35" transform="rotate(-40 55 130)"/>
+        <ellipse cx="80" cy="105" rx="12" ry="6" fill="#d4b8d5" opacity=".3" transform="rotate(-60 80 105)"/>
+        <ellipse cx="38" cy="145" rx="10" ry="5" fill="#c9a6ca" opacity=".25" transform="rotate(-20 38 145)"/>
+        <g transform="translate(95,72)">
+          <circle cx="0" cy="0" r="5" fill="#e8d0e9" opacity=".7"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#d4b8d5" opacity=".6" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-10" rx="5" ry="8" fill="#c9a6ca" opacity=".5" transform="rotate(300)"/>
+          <circle cx="0" cy="0" r="3.5" fill="#f0e0f1" opacity=".9"/>
+        </g>
+        <g transform="translate(60,48)">
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#e2c8e3" opacity=".55"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#e2c8e3" opacity=".55" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-8" rx="4" ry="7" fill="#d4b8d5" opacity=".5" transform="rotate(288)"/>
+          <circle cx="0" cy="0" r="3" fill="#f5edf6" opacity=".9"/>
+        </g>
+        <g transform="translate(118,45)">
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#e8d0e9" opacity=".5"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#e8d0e9" opacity=".5" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-6" rx="3.5" ry="6" fill="#d4b8d5" opacity=".45" transform="rotate(300)"/>
+          <circle cx="0" cy="0" r="2.5" fill="#f5edf6" opacity=".9"/>
+        </g>
+        <ellipse cx="75" cy="30" rx="4" ry="7" fill="#d4b8d5" opacity=".4" transform="rotate(-20 75 30)"/>
+        <ellipse cx="35" cy="110" rx="3" ry="5" fill="#c9a6ca" opacity=".35" transform="rotate(30 35 110)"/>
+        <circle cx="105" cy="95" r="1.8" fill="#c9a6ca" opacity=".4"/>
+        <circle cx="50" cy="60" r="1.4" fill="#d4b8d5" opacity=".35"/>
+        <circle cx="85" cy="55" r="1.2" fill="#c9a6ca" opacity=".3"/>
+      </g>
+    </svg>
+
+    <!-- ── Bismillah ───────────────────────────────── -->
+    <div class="section" style="margin-bottom: 0;">
+      <p class="bismillah-ar">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+      <p class="bismillah-en">In the Name of Allah, Most Gracious, Most Merciful</p>
+    </div>
+
+    <!-- ── Divider ─────────────────────────────────── -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-dot"></div>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b89bb9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 2 L13.8 8.6 L20.7 8.6 L15.1 12.7 L17 19.3 L12 15.2 L7 19.3 L8.9 12.7 L3.3 8.6 L10.2 8.6 Z"/>
+      </svg>
+      <div class="divider-dot"></div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ── Body copy ───────────────────────────────── -->
+    <div class="section">
+      <p class="body-text">Together our families<br>we request the honor of your presence<br>at the reception of</p>
+    </div>
+
+    <!-- ── Names ───────────────────────────────────── -->
+    <div class="section names-wrap">
+      <span class="name">Saad</span>
+      <span class="ampersand">&amp;</span>
+      <span class="name">Saniya</span>
+      <p class="with-family">with family</p>
+    </div>
+
+    <!-- ── Divider 2 ───────────────────────────────── -->
+    <div class="divider" style="animation-delay:.8s">
+      <div class="divider-line"></div>
+      <div class="divider-dot"></div>
+      <div class="divider-dot"></div>
+      <div class="divider-dot"></div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ── Details ────────────────────────────────────── -->
+    <div class="details">
+
+      <!-- Date -->
+      <div class="detail-item">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" aria-label="Date">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8"  y1="2" x2="8"  y2="6"/>
+            <line x1="3"  y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <p class="detail-label">Date &amp; Time</p>
+        <p class="detail-main">Friday, May 01, 2026</p>
+        <p class="detail-sub">at 8:00 PM</p>
+      </div>
+
+      <!-- Location -->
+      <div class="detail-item">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" aria-label="Location">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <p class="detail-label">Venue</p>
+        <p class="detail-main">Royal Golden Resort &amp; Marriage Lawn</p>
+        <p class="detail-sub">Anjuman Lawn ke paas Ring Road<br>(Jhanda), Chhindwara</p>
+        <a class="map-btn" href="https://maps.app.goo.gl/AfVzNY1jVtcugLjg8" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Location
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ── Bottom ornament ────────────────────────── -->
+    <div class="section bottom-ornament">
+      <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="#b89bb9" fill="none" stroke-linecap="round">
+          <line x1="10" y1="15" x2="45" y2="15" stroke-width=".8"/>
+          <path d="M45 15 Q52 6 60 15 Q68 24 75 15" stroke-width=".9"/>
+          <line x1="75" y1="15" x2="110" y2="15" stroke-width=".8"/>
+          <circle cx="60" cy="15" r="2" fill="#c9a6ca" opacity=".6"/>
+          <circle cx="10" cy="15" r="1.2" fill="#c9a6ca" opacity=".4"/>
+          <circle cx="110" cy="15" r="1.2" fill="#c9a6ca" opacity=".4"/>
+        </g>
+      </svg>
+    </div>
+
+  </div><!-- /card -->
+</div><!-- /page -->
+</body>
+</html>
